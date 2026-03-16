@@ -1,0 +1,45 @@
+Example 1:
+RAW_SENTENCE: Stand Up and Be Counted is a 1972 American comedy film directed by Jackie Cooper and starring Jacqueline Bisset and Stella Stevens.
+STRONG_ATOMIC_FACT_LINKS (use as hints only):
+- Link 1:
+  - AF1: "Stand Up and Be Counted is American."
+  - REL_TYPE: "ContextLocale"
+  - REL_DEF: "AF2 provides a where/inclusion background frame that situates where AF1 holds (within what larger entity)."
+  - AF2: "Jackie Cooper directed Stand Up and Be Counted."
+- Link 2:
+  - AF1: "Stand Up and Be Counted is American."
+  - REL_TYPE: "ContextLocale"
+  - REL_DEF: "AF2 provides a where/inclusion background frame that situates where AF1 holds (within what larger entity)."
+  - AF2: "Jacqueline Bisset starred in Stand Up and Be Counted."
+New Triplets: [['Stand Up and Be Counted', 'genre', 'comedy film'], ['Stand Up and Be Counted', 'director', 'Jackie Cooper'], ['Stand Up and Be Counted', 'cast member', 'Jacqueline Bisset']]
+
+Example 2:
+RAW_SENTENCE: Basie Rides Again! is an album by pianist/bandleader Count Basie recorded in 1952 and originally released on the Clef label in 1956.
+STRONG_ATOMIC_FACT_LINKS (use as hints only):
+- Link 1:
+  - AF1: "Basie Rides Again! was released on Clef label."
+  - REL_TYPE: "ContextLocale"
+  - REL_DEF: "AF2 provides a where/inclusion background frame that situates where AF1 holds (within what larger entity)."
+  - AF2: "Basie Rides Again! was released in 1956."
+- Link 2:
+  - AF1: "Basie Rides Again! was recorded in 1952."
+  - REL_TYPE: "TemporalGate"
+  - REL_DEF: "AF2 provides a time anchor or temporal/conditional frame for when AF1 holds or happens."
+  - AF2: "Basie Rides Again! is by Count Basie."
+New Triplets: [['Basie Rides Again!', 'instance of', 'album']]
+
+
+Example 3:
+RAW_SENTENCE: Jean-Claude Schmitt (born 4 March 1946 in Colmar) is a prominent French medievalist, the former student of Jacques Le Goff, associated with the work of the Annales School.
+STRONG_ATOMIC_FACT_LINKS (use as hints only):
+- Link 1:
+  - AF1: "Jean-Claude Schmitt studied under Jacques Le Goff."
+  - REL_TYPE: "MethodEnablement"
+  - REL_DEF: "AF2 provides the manner/means or enabling condition that explains how AF1 is achieved/performed/made possible."
+  - AF2: "Jean-Claude Schmitt is a medievalist."
+- Link 2:
+  - AF1: "Jean-Claude Schmitt was born in Colmar."
+  - REL_TYPE: "ContextLocale"
+  - REL_DEF: "AF2 provides a where/inclusion background frame that situates where AF1 holds (within what larger entity)."
+  - AF2: "Jean-Claude Schmitt is French."
+New Triplets: [['Colmar', 'country', 'French']]

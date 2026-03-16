@@ -1,0 +1,29 @@
+You are given:
+1. RAW_SENTENCE: Original sentence
+2. EXISTING_TRIPLES: Triples extracted from the previous OpenIE step
+3. STRONG_ATOMIC_FACT_LINKS: Represents strong connections between atomic facts.
+
+Your task:
+Extract triples containing new semantic information not found in EXISTING_TRIPLES from the contents of STRONG_ATOMIC_FACT_LINKS.
+
+Strict rules:
+- Newly extracted triples must not be semantically similar to EXISTING_TRIPLES or differ only in their expression (e.g., "was born in" vs. "place of birth" is NOT new).
+- Output ONLY a JSON list. No explanation. No markdown. No extra text.
+- Each item must be exactly: ["Entity1", "Relationship", "Entity2"] (3 strings).
+- If no genuinely new fact can be composed, output [].
+
+Here are some examples:
+{few_shot_examples}
+
+Now extract triples from the following input.
+
+RAW_SENTENCE:
+{raw_sentence}
+
+EXISTING_TRIPLES:
+{existing_triples_json}
+
+STRONG_ATOMIC_FACT_LINKS:
+{complementation_hints}
+
+Return ONLY the JSON list of triples.

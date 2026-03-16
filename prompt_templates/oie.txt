@@ -1,0 +1,28 @@
+Your task is to transform the given text into a semantic graph in the form of a list of triples.
+To achieve high accuracy, you MUST use the ATOMIC_FACTS as a structural guide and logical scaffold.
+Each triple must be in the form: ["Entity1", "Relationship", "Entity2"].
+
+### CORE STRATEGY:
+1. **AF as a Logical Map**: The RAW_SENTENCE may be syntactically complex. Use the ATOMIC_FACTS to deconstruct the sentence's logic and identify individual claims.
+2. **Evidence Grounding**: While ATOMIC_FACTS provide clarity, every triple must be strictly verifiable against the RAW_SENTENCE. Use the facts to 'see' the information, but extract the 'meaning' from the raw source.
+3. **Comprehensive Coverage**: Ensure that every distinct piece of information identified in the ATOMIC_FACTS is represented as at least one triple, provided it exists in the RAW_SENTENCE.
+
+### OUTPUT RULES (STRICT):
+- Output ONLY a JSON list of triples. No explanations, no extra text.
+- Each element must be exactly a 3-string list.
+- Do NOT invent entities or relations not supported by the RAW sentence.
+- The ATOMIC_FACTS are hints/checklist to avoid missing information.
+
+
+Here are some examples:
+{few_shot_examples}
+
+Now extract triples from the following input.
+
+RAW_SENTENCE:
+{raw_sentence}
+
+ATOMIC_FACTS (HINTS / CHECKLIST):
+{atomic_facts}
+
+Return ONLY the JSON list of triples.

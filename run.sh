@@ -1,0 +1,33 @@
+DATASET=rebel
+
+python run.py \
+  --input_txt ./datasets/${DATASET}.txt \
+  --work_dir ./preprocess_outputs/${DATASET} \
+  --atomic_llm meta-llama/Llama-3.1-8B-Instruct \
+  --weak_llm meta-llama/Llama-3.1-8B-Instruct \
+  --rgat_e5_model intfloat/e5-base-v2 \
+  --rgat_top_k_pairs 10 \
+  --rgat_rank_metric e_center \
+  --rgat_add_reverse \
+  --oie_llm meta-llama/Llama-3.1-8B-Instruct \
+  --oie_prompt_template ./prompt_templates/oie.txt \
+  --oie_few_shot ./few_shot_examples/${DATASET}/oie_few_shot_examples.txt \
+  --out_jsonl ./outputs/${DATASET}_oie_outputs.jsonl \
+  --dump_pretty_json \
+  --run_step2 \
+  --comp_llm meta-llama/Llama-3.1-8B-Instruct \
+  --comp_prompt_template ./prompt_templates/oie_complementation.txt \
+  --comp_few_shot ./few_shot_examples/${DATASET}/complementation_few_shot_examples.txt \
+  --run_closedie \
+  --schema_csv ./schemas/${DATASET}_schema.csv \
+  --schema_embed_model intfloat/e5-base-v2 \
+  --schema_reranker_model BAAI/bge-reranker-v2-m3 \
+  --ce_gate_mode qabs \
+  --ce_abs_quantile 0.50 \
+  --fallback_band_quantile 0.40 \
+  --fallback_margin_quantile 0.40 \
+  --quantile_clip_low -10.0 \
+  --quantile_clip_high 0.0 \
+  --fallback_max_add 1 \
+  --closedie_none_policy drop \
+  --kg_out_path ./outputs/${DATASET}_kg.txt
