@@ -2,7 +2,12 @@
 
 Official implementation of the paper **"Connectivity-Aware Knowledge Graph Construction for Complex Sentences"**.
 
-This repository provides the research code for a schema-aligned knowledge graph construction pipeline designed for complex sentences. The framework decomposes an input sentence into atomic facts, models inter-fact connectivity to alleviate decomposition-induced contextual fragmentation, extracts candidate triples, and normalizes open-vocabulary relation expressions to a predefined target schema. The current implementation supports experiments on **REBEL**, **Wiki-NRE**, and **WebNLG**.
+## Overview
+This repository provides the research code for a schema-aligned knowledge graph construction pipeline designed for complex sentences. The framework decomposes an input sentence into atomic facts, models inter-fact connectivity to alleviate decomposition-induced contextual fragmentation, extracts candidate triples, and normalizes open-vocabulary relation expressions to a predefined target schema.
+Supported datasets:
+- REBEL
+- Wiki-NRE
+- WebNLG
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue" />
@@ -28,9 +33,8 @@ This repository provides the research code for a schema-aligned knowledge graph 
 ```
 
 ## Pipeline Overview
-
 <p align="center">
-  <img src="figs/pipeline.png" width="95%">
+  <img src="figs/pipeline.png" width="95%" style="background-color: white; padding: 12px; border-radius: 8px;">
 </p>
 
 
