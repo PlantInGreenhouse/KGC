@@ -1,4 +1,4 @@
-name: sth
+name: kgc
 channels:
   - defaults
   - conda-forge

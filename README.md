@@ -1,6 +1,6 @@
 # Connectivity-Aware Knowledge Graph Construction for Complex Sentences
 
-Official implementation of the paper **"Connectivity-Aware Knowledge Graph Construction for Complex Sentences"**.
+Official implementation of the paper **"Connectivity-Aware Knowledge Graph Construction from Complex Sentences via Atomic Fact Decomposition"**.
 
 ## Overview
 This repository provides the research code for a schema-aligned knowledge graph construction pipeline designed for complex sentences. The framework decomposes an input sentence into atomic facts, models inter-fact connectivity to alleviate decomposition-induced contextual fragmentation, extracts candidate triples, and normalizes open-vocabulary relation expressions to a predefined target schema.
@@ -52,8 +52,8 @@ The implementation is organized under `oie/`, with dataset files in `datasets/`,
 
 
 ```bibtex
-@article{yourpaper2026,
-  title={Connectivity-Aware Knowledge Graph Construction for Complex Sentences},
+@article{2026,
+  title={Connectivity-Aware Knowledge Graph Construction from Complex Sentences via Atomic Fact Decomposition},
   author={},
   journal={Expert Systems with Applications},
   year={2026}
